@@ -1,0 +1,75 @@
+//Initialise variable 
+int unit = 500;// duration for a unit
+
+int LED = D7; //this will blink inbuilt LED D7 
+
+// Functions
+void setup() {
+
+
+  pinMode(LED, OUTPUT);
+
+}
+
+void dot() {
+    
+    digitalWrite(LED, HIGH);
+    delay(unit);
+    digitalWrite(LED, LOW);
+    delay(unit);
+    
+}
+
+void dash(){
+    
+    digitalWrite(LED, HIGH);
+    delay(unit*3);
+    digitalWrite(LED, LOW);
+    delay(unit);
+    
+}
+
+void new_character() {
+    
+    delay(unit*2);
+}
+
+void new_word() {
+    
+    delay(unit*6);
+}
+
+void loop() {
+
+    // letter E
+    dot();
+    
+    new_character();
+    // letter N
+    dash();
+    dot();
+    
+    new_character();
+    
+    // letter O
+    dash();
+    dash();
+    dash();
+
+    new_character();
+    
+    // letter C
+    dash();
+    dot();
+    dash();
+    dot();
+    
+    new_character();
+    
+    // letter K
+    dash();
+    dot();
+    dash();
+   
+    
+}
